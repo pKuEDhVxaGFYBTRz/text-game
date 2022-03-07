@@ -8,8 +8,21 @@ namespace text_game.game
 {
     enum items
     {
+        none,
         test1,
         test2,
         test3,
+    }
+
+    struct inventorySlot
+    {
+        items item;
+        int quantity;
+
+        public inventorySlot(items initial = items.none, int initialQuantity = 0)
+        {
+            item = initial;
+            quantity = initialQuantity;
+        }
     }
 }
