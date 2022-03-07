@@ -17,12 +17,15 @@ namespace text_game.game.locations
 
             // create new random map
             grid = new location[5,5];
+            int randomLocation;
 
             for (int i = 0; i < grid.GetLength(0); i++)
             {
                 for (int j = 0; j < grid.GetLength(1); j++)
                 {
                     randomLocation = random.Next(0, (int)locations.size);
+
+                    // TODO make location class instance and place on grid
                 }
             }
         }
@@ -50,7 +53,7 @@ namespace text_game.game.locations
         woodsOuter,
         well,
         tavern,
-        size = 6, // MUST BE LAST
+        size, // MUST BE LAST
     }
 
     //TODO filler location gen
