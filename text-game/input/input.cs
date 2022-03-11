@@ -12,7 +12,7 @@ namespace text_game.input
         public static string inputCommand()
         {
             // get input
-            Console.Write(prompt);
+            Console.Write("\n" + prompt);
             string input = Console.ReadLine();
 
             // clear old text

@@ -32,7 +32,7 @@ namespace text_game.game.locations
     }
 
     // store data about a location
-    struct location
+    public struct location
     {
         public int x;
         public int y;

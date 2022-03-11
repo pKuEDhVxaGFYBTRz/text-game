@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace text_game.game
 {
-    enum items
+    public enum items
     {
         none,
         test1,

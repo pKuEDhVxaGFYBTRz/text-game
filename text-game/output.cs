@@ -20,9 +20,16 @@ namespace text_game
 
         public static void errorNoCommand()
         {
-            //Console.ForegroundColor = ConsoleColor.Red;
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.Write("you must include a command");
-            //Console.ResetColor();
+            Console.ResetColor();
+        }
+
+        internal static void errorInvalidCommand()
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write("can you rephrase that please?");
+            Console.ResetColor();
         }
     }
 }
