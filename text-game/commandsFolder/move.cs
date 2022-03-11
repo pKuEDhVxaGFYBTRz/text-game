@@ -22,6 +22,16 @@ namespace text_game
             if (player.position.x > 4) { Console.WriteLine("you have fallen off the edge of the flat earth."); player.dead = true; }
         }
 
+        internal static void look(player p)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static void help(player p)
+        {
+            
+        }
+
         public static void forwards(player player)
         {
             player.position = new location(player.position.x, player.position.y -1);

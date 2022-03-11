@@ -17,6 +17,9 @@ namespace text_game
             { commands.backwards, (player p) => commandFunctions.backwards(p) },
             { commands.left, (player p) => commandFunctions.left(p) },
             { commands.right, (player p) => commandFunctions.right(p) },
+            { commands.look, (player p) => commandFunctions.look(p) },
+
+            { commands.help, (player p) => commandFunctions.help(p) },
         };
 
     }
