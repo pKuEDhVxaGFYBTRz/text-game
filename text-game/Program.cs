@@ -39,6 +39,8 @@ namespace text_game
 
                     if (validCommand) { commandToRun(playerInstance); }
                     else { output.errorInvalidCommand(); }
+
+                    if (playerInstance.dead) { output.Death(); return; }
                 }
 
                 //Console.WriteLine(commandList.Count);

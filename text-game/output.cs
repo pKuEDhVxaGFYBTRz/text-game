@@ -10,12 +10,12 @@ namespace text_game
     {
         public static void message(string msg)
         {
-            Console.WriteLine(msg.ToString());
+            Console.Write(msg.ToString());
         }
 
         public static void description(string msg)
         {
-            Console.WriteLine(msg);
+            Console.Write(msg);
         }
 
         public static void errorNoCommand()
@@ -27,8 +27,15 @@ namespace text_game
 
         internal static void errorInvalidCommand()
         {
-            Console.ForegroundColor = ConsoleColor.Red;
+            Console.ForegroundColor = ConsoleColor.Blue;
             Console.Write("can you rephrase that please?");
+            Console.ResetColor();
+        }
+
+        internal static void Death()
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write("you have died.");
             Console.ResetColor();
         }
     }

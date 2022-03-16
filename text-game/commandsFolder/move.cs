@@ -8,7 +8,7 @@ using text_game.game.locations;
 
 namespace text_game
 {
-    internal static class commandFunctions
+    public static class commandFunctions
     {
         public static void left(player player)
         {
@@ -22,14 +22,19 @@ namespace text_game
             if (player.position.x > 4) { Console.WriteLine("you have fallen off the edge of the flat earth."); player.dead = true; }
         }
 
-        internal static void look(player p)
-        {
-            throw new NotImplementedException();
-        }
-
-        internal static void help(player p)
+        public static void look(player p)
         {
             
+        }
+
+        public static void help(player p)
+        {
+            return;
+        }
+
+        public static void suicide(player p)
+        {
+            Console.WriteLine("you committed suicide"); p.dead = true;
         }
 
         public static void forwards(player player)

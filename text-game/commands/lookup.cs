@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using text_game.game;
 
+
 namespace text_game
 {
     class commandLookup
@@ -18,6 +19,8 @@ namespace text_game
             { commands.left, (player p) => commandFunctions.left(p) },
             { commands.right, (player p) => commandFunctions.right(p) },
             { commands.look, (player p) => commandFunctions.look(p) },
+
+            { commands.suicide, (player p) => commandFunctions.suicide(p) },
 
             { commands.help, (player p) => commandFunctions.help(p) },
         };

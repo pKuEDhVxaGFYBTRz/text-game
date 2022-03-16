@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-/*
 namespace text_game
 {
     enum commands
@@ -18,8 +17,9 @@ namespace text_game
 
         look,       // rewrite place description
 
+        suicide,    // death
+
         invalid,    // invalid command
         nocommand,
     }
 }
-*/
