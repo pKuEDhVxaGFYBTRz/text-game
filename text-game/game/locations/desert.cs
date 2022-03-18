@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace text_game.game.locations
 {
-    internal class woodsCenter : Tile
+    internal class desert : Tile
     {
-        public new string Name = "Deep forest";
-        public new string Description = "A deep dark woods";
+        public new string name { get; set; } = "desert";
+        public new string description { get; } = "a sandy place";
     }
 }

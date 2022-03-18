@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using text_game.game;
+using text_game.game.locations;
 
 namespace text_game
 {
@@ -10,11 +11,12 @@ namespace text_game
         static void Main(string[] args)
         {
             player playerInstance = new player();
+            map mapInstance = new map();
 
-            loop(playerInstance);
+            loop(playerInstance, mapInstance);
         }
 
-        public static void loop(player playerInstance)
+        public static void loop(player playerInstance, map mapInstance)
         {
             string inputString;
             List<commands> commandList;
@@ -37,7 +39,7 @@ namespace text_game
                 {
                     validCommand = commandLookup.Mapping.TryGetValue(command, out commandToRun);
 
-                    if (validCommand) { commandToRun(playerInstance); }
+                    if (validCommand) { commandToRun(playerInstance, mapInstance); }
                     else { output.errorInvalidCommand(); }
 
                     if (playerInstance.dead) { output.Death(); return; }

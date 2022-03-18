@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace text_game.game.locations
 {
-    internal class woodsCenter : Tile
+    public class woodsOuter : Tile
     {
-        public new string Name = "Deep forest";
-        public new string Description = "A deep dark woods";
+        public new string Name = "light forest";
+        public new string Description = "A wooded area with pleanty of light";
+
+
     }
 }

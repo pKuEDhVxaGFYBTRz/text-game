@@ -32,6 +32,9 @@ namespace text_game.parser
 
                 case "die": return commands.suicide;
                 case "suicide": return commands.suicide;
+                case "exit": return commands.suicide;
+
+                case "help": return commands.help;
 
                 // default
                 default: return commands.invalid;

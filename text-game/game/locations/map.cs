@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace text_game.game.locations
 {
-    internal class map
+    public class map
     {
         public location[,] grid;
 
@@ -14,6 +14,7 @@ namespace text_game.game.locations
 
         public map()
         {
+            random = new Random();
 
             // create new random map
             grid = new location[5,5];
@@ -23,7 +24,7 @@ namespace text_game.game.locations
             {
                 for (int j = 0; j < grid.GetLength(1); j++)
                 {
-                    randomLocation = random.Next(0, (int)locations.size);
+                    randomLocation = random.Next(0);
 
                     // TODO make location class instance and place on grid
                 }
@@ -43,18 +44,4 @@ namespace text_game.game.locations
             this.y = y;
         }
     }
-
-    // all possible tiles
-    enum locations
-    {
-        village1,
-        village2,
-        woodsCenter,
-        woodsOuter,
-        well,
-        tavern,
-        size, // MUST BE LAST
-    }
-
-    //TODO filler location gen
 }
