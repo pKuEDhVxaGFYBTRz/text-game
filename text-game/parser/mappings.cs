@@ -30,11 +30,18 @@ namespace text_game.parser
                 case "right": return commands.right;
                 case "d": return commands.right;
 
+                // exit
                 case "die": return commands.suicide;
                 case "suicide": return commands.suicide;
                 case "exit": return commands.suicide;
 
+                // case 
                 case "help": return commands.help;
+
+                // look around
+                case "look" : return commands.look;
+                case "inspect" : return commands.look;
+                case "l" : return commands.look;
 
                 // default
                 default: return commands.invalid;

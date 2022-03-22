@@ -8,25 +8,26 @@ namespace text_game.game.locations
 {
     public class map
     {
-        public location[,] grid;
-
-        Random random;
+        public Tile[,] grid;
 
         public map()
         {
-            random = new Random();
-
             // create new random map
-            grid = new location[5,5];
-            int randomLocation;
+            grid = new Tile[5,5];
+
+            locationEnums.locations randomLocationEnum;
 
             for (int i = 0; i < grid.GetLength(0); i++)
             {
                 for (int j = 0; j < grid.GetLength(1); j++)
                 {
-                    randomLocation = random.Next(0);
+                    
+                    randomLocationEnum = locationEnums.RandomEnumValue();
+                    Tile tile = locationEnums.lookupLocation(randomLocationEnum);
 
-                    // TODO make location class instance and place on grid
+                    tile.Location = new location(i, j);
+                    
+                    grid[i,j] = tile;
                 }
             }
         }
