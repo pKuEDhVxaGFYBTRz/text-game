@@ -14,10 +14,11 @@ namespace text_game.game.locations
             dessert,
             woodsCenter,
             woodsOuter,
+            city,
 
         }
 
-        public const int LocationLength = 3;
+        public const int LocationLength = 4;
 
         // https://stackoverflow.com/a/3132139
         // get random value from enum
@@ -36,6 +37,7 @@ namespace text_game.game.locations
                 case locations.dessert:         return new desert();
                 case locations.woodsCenter:     return new woodsCenter();
                 case locations.woodsOuter:      return new woodsOuter();
+                case locations.city:            return new city();
             }
             return null;
         }

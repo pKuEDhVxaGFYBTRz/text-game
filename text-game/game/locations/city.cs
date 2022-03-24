@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace text_game.game.locations
 {
-    public class woodsOuter : Tile
+    internal class city : Tile
     {
-        public woodsOuter()
+        public city()
         {
-            Name = "light forest";
-            Description = "A wooded area with pleanty of light";
+            Name = "village";
+            Description = "a place to meet new people";
         }
     }
 }

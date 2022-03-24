@@ -9,13 +9,19 @@ namespace text_game.game.locations
     public class map
     {
         public Tile[,] grid;
+        public const int width = 5;
+        public location winning;
+        
+        private Random random;
 
         public map()
         {
-            // create new random map
-            grid = new Tile[5,5];
-
             locationEnums.locations randomLocationEnum;
+
+            // create new random map
+            grid = new Tile[width,width];
+
+            winning = new location(random.Next(width), random.Next(width));
 
             for (int i = 0; i < grid.GetLength(0); i++)
             {

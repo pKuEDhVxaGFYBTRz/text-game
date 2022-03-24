@@ -8,7 +8,11 @@ namespace text_game.game.locations
 {
     internal class desert : Tile
     {
-        public new string Name { get; set; } = "desert";
-        public new string Description { get; } = "a sandy place";
+       public desert()
+        {
+            Name = "desert";
+            Description = "a sandy place";
+
+        }
     }
 }
