@@ -14,17 +14,14 @@ namespace text_game
         {
             player.position = new location(player.position.x - 1, player.position.y);
             if (player.position.x < 0) { Console.WriteLine("you have fallen off the edge of the flat earth."); player.dead = true; }
+            if(!player.dead) { output.destination(map.grid[player.position.x, player.position.y].Name); }
         }
 
         public static void right(player player, map map)
         {
             player.position = new location(player.position.x + 1, player.position.y);
-            if (player.position.x > 4) { Console.WriteLine("you have fallen off the edge of the flat earth."); player.dead = true; }
-        }
-
-        public static void help(player p, map map)
-        {
-            Console.WriteLine("use exit to quit the program and view the included markdown doc readme.md");
+            if (player.position.x > map.width-1) { Console.WriteLine("you have fallen off the edge of the flat earth."); player.dead = true; }
+            if(!player.dead) { output.destination(map.grid[player.position.x, player.position.y].Name); }
         }
 
         public static void suicide(player p, map map)
@@ -35,13 +32,15 @@ namespace text_game
         public static void forwards(player player, map map)
         {
             player.position = new location(player.position.x, player.position.y + 1);
-            if (player.position.y < 0) { Console.WriteLine("you have fallen off the edge of the flat earth."); player.dead = true; }
+            if (player.position.y > map.width-1) { Console.WriteLine("you have fallen off the edge of the flat earth."); player.dead = true; }
+            if(!player.dead) { output.destination(map.grid[player.position.x, player.position.y].Name); }
         }
 
         public static void backwards(player player, map map)
         {
             player.position = new location(player.position.x, player.position.y - 1);
-            if (player.position.x > 4) { Console.WriteLine("you have fallen off the edge of the flat earth."); player.dead = true; }
+            if (player.position.x < 0) { Console.WriteLine("you have fallen off the edge of the flat earth."); player.dead = true; }
+            if(!player.dead) { output.destination(map.grid[player.position.x, player.position.y].Name); }
         }
     }
 }

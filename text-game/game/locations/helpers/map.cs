@@ -12,7 +12,7 @@ namespace text_game.game.locations
         public const int width = 5;
         public location winning;
         
-        private Random random;
+        private Random random = new();
 
         public map()
         {

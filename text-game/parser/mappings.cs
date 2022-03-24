@@ -31,11 +31,13 @@ namespace text_game.parser
                 case "d": return commands.right;
 
                 // exit
+                case "k": return commands.suicide;
                 case "die": return commands.suicide;
                 case "suicide": return commands.suicide;
                 case "exit": return commands.suicide;
 
                 // case 
+                case "h" : return commands.help;
                 case "help": return commands.help;
 
                 // look around

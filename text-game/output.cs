@@ -13,6 +13,14 @@ namespace text_game
             Console.Write(msg.ToString());
         }
 
+        public static void destination(string name)
+        {
+            Console.Write("you have arrived at a ");
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.Write(name);
+            Console.ResetColor();
+        }
+
         public static void description(string msg)
         {
             Console.Write(msg);
@@ -25,14 +33,21 @@ namespace text_game
             Console.ResetColor();
         }
 
-        internal static void errorInvalidCommand()
+        public static void HasWon()
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write("you have won! find the next objective.");
+            Console.ResetColor();
+        }
+
+        public static void errorInvalidCommand()
         {
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.Write("can you rephrase that please?");
             Console.ResetColor();
         }
 
-        internal static void Death()
+        public static void Death()
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.Write("you have died.");

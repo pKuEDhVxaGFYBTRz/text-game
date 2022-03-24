@@ -1,11 +1,11 @@
 # Text Game
 
-This is a game about...
+This is a game about chasing a cat.
 
 ## Commands
 
 The commands below allow you to easily move around the map.
-|Command|description|
+|Command|Description|
 |-|-|
 |w, forwards, north|move north|
 |a, left, west|move west|
@@ -16,6 +16,6 @@ There are some general commands to interact with the world below.
 
 |Command|Description|
 |-|-|
-|look|gather information about nearby land|
-|kill, suicide, exit|kill yourself and exit the game.|
-|help|open the help dialogue|
+|l, look, inspect|gather information about nearby land|
+|k, kill, suicide, exit|kill yourself and exit the game.|
+|h, help|open the help dialogue|

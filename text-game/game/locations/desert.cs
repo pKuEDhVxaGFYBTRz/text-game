@@ -12,7 +12,6 @@ namespace text_game.game.locations
         {
             Name = "desert";
             Description = "a sandy place";
-
         }
     }
 }

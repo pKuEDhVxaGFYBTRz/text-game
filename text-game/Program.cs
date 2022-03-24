@@ -41,14 +41,10 @@ namespace text_game
 
                     if (validCommand) { commandToRun(playerInstance, mapInstance); }
                     else { output.errorInvalidCommand(); }
+                    Console.WriteLine('\n');
 
                     if (playerInstance.dead) { output.Death(); return; }
                 }
-
-                //Console.WriteLine(commandList.Count);
-
-                //Console.WriteLine("test string");
-
             }
         }
     }
